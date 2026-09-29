@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFlvGMRnYOj8mt1oh-BbgP1gkDbLwLwSZLErjoCXW1rLXt0CM2RJ3bbXqu&s=10" width="300">
+    <h1>Sistema de controle de salários e contratação</h1>
+    <p>Bem-vindo ao sistema de controle de salários e contratação!</p>
+   
+   
+    <h2>Formulário de Cadastro</h2>
+
+    <form action="submit" id="formulario">
+<label for="name">Digite o nome!</label><br>
+<input type="text" id="nome"><br><br>
+<label for="cargo">Digite o cargo!</label><br>
+<input type="text" id="cargo"><br><br>
+<label for="salario">Digite o salário!</label><br>
+<input type="number" id="salario" step="0.01"><br><br>
+<input type="submit" value="Enviar">
+    </form>
+     <script>
+
+        const form = document.querySelector("#formulario")
+        form.addEventListener("submit", function(event) {
+            event.preventDefault()
+            const nome = document.querySelector("#nome").value
+            const cargo = document.querySelector("#cargo").value
+            const salario = document.querySelector("#salario").value
+            alert("Formulario preenchido com sucesso!"+ nome + " " + cargo + " " + salario)
+        }
+    )
+    </script>
+
+    <h2>Tabela de Controle</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cargo</th>
+                <th>Salário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João Silva</td>
+                <td><eng class="eletrico">Eletricista</eng></td>
+                <td>R$ 11153,00</td>
+            </tr>
+            <tr>
+                <td>Maria joaquina</td>
+                <td>veterinária</td>
+                <td>R$ 4.500,00</td>
+            </tr>
+            <tr>
+                <td>Monica</td>
+                <td><design class="site">Eletricista</design></td>
+                <td>R$ 2.500,00</td>
+            </tr>
+            <tr>
+                <td>Pantera cor de rosa</td>
+                <td>arquiteto</td>
+                <td>R$ 2.500,00</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
